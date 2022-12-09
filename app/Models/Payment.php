@@ -1,0 +1,34 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Payment extends Model
+{
+    use HasFactory;
+
+    protected $fillable = 
+    [
+        'price',
+        'status',
+        'user_id',
+        'order_id',
+        'url_payment'      
+    ];
+
+    protected $guarded = 
+    [   'id', 
+        'created_at', 
+        'updated_at'
+    ];
+
+    
+    public function order() {
+    return $this->belongsTo(Order::class, 'order_id', 'id');
+    }
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+}

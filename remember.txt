@@ -1,0 +1,20 @@
+CONTROLLER
+Product::query -> consulta
+whereHas: hacer consulta a relaciones
+
+MODEL
+$guarded es lo contrario a $fillable, con $guarded asigno los campos que no quiero que se 
+asignen masivamente los demas campos se asignarán con normalidad.
+
+layout.app
+el stack es como una variable 
+
+Helper
+Funciones creadas por mi para usarlas a lo largo del proyecto
+
+Prefix
+El nombre que estableci en el prefijo del archivo RouteserviceProvider es el admin por lo cual la ruta '/' será admin
+
+Storage/images
+php artisan storage:link 
+to create a shortcut
